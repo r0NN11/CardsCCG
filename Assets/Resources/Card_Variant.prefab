@@ -95,6 +95,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6672492594976857262, guid: db7b435745af87145b2e8e511c2a871f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6672492595702345872, guid: db7b435745af87145b2e8e511c2a871f, type: 3}
       propertyPath: m_text
       value: 'Battlecry: Draw Galakrond. If you''re already Galakrond unleash a Devastation.'

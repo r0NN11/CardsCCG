@@ -42,7 +42,7 @@ namespace _Core.Scripts.UI.Card
         {
             _currentCard.transform.DOMove(_defaultCardPlace, _timeScale);
             _currentCard.transform.DOLocalRotateQuaternion(_defaultCardRotation, _timeScale);
-            _currentCard.transform.DOScale(1f, _timeScale);
+            _currentCard.transform.DOScale(0.75f, _timeScale);
             _currentCard.ActivateCard();
         }
     }

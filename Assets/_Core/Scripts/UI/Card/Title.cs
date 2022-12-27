@@ -8,14 +8,13 @@ namespace _Core.Scripts.UI.Card
     [RequireComponent(typeof(TextMeshProUGUI))]
     public class Title : MonoBehaviour
     {
-        [SerializeField] private TextMeshProUGUI _title;
-
+        private TextMeshProUGUI _title;
 
         private void Start()
         {
             _title = GetComponent<TextMeshProUGUI>();
             if (_title.text.Length <= 12) return;
-            _title.GetComponent<WarpTextExample>().enabled = true;
+            var warpText = _title.GetComponent<WarpTextExample>().enabled = true;
             _title.rectTransform.DOLocalMoveY(1, 0);
         }
     }
