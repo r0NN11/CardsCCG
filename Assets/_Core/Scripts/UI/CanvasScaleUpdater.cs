@@ -7,23 +7,19 @@ namespace _Core.Scripts.UI
     public class CanvasScaleUpdater : MonoBehaviour
     {
         [SerializeField] private CanvasScaler _canvasScaler;
-        [SerializeField] private Camera _mainCamera;
+        private Camera _mainCamera;
 
         private void UpdateScale()
         {
-            
             var canvasAspect = _canvasScaler.referenceResolution.x / _canvasScaler.referenceResolution.y;
-            
+
             var screenAspect = _mainCamera.aspect;
-            if (canvasAspect < screenAspect)
-                _canvasScaler.matchWidthOrHeight = 1;
-            else
-                _canvasScaler.matchWidthOrHeight = 0;
+            _canvasScaler.matchWidthOrHeight = canvasAspect < screenAspect ? 1 : 0;
         }
 
-        private void Start()
+        private void Awake()
         {
-            _mainCamera=Camera.main;
+            _mainCamera = Camera.main;
             UpdateScale();
         }
 
